@@ -1,0 +1,28 @@
+format
+
+p1 = [2, 6, -3];
+p2 = [3 -14, 49];
+p3 = [3, -123454321, 2];
+
+
+%p = p1
+%p = p2
+p = p3
+
+fprintf('quadroots output: ')
+[r1, r2] = quadroots(p(1), p(2), p(3))
+(r1+r2) + p(2) / p(1)
+p(3)/p(1) - r1 * r2    %% relatively bigger than the output of other functions
+
+fprintf('roots function output: ')
+result = roots(p);
+res1 = result(1)
+res2 = result(2)
+(res1 + res2) + p(2) / p(1)
+p(3)/p(1) - res1 * res2
+
+fprintf('smartquadroots output: ')
+[sr1, sr2] = smartquadroots(p(1), p(2), p(3))
+(sr1 + sr2) + p(2) / p(1)
+p(3)/p(1) - sr1 * sr2
+
