@@ -1,9 +1,12 @@
 function v = polyvalue(a,x,t)
-%compute the value of an interpolating polynomial
     m = length(x);
+
+    % coefficients of the interpolating polynomial
     c = diag(a);
+    
+    %compute the Newton's polynomial 
     v = c(m);
     for i = m-1:-1:1
-        v = v*(t - x(i))+ c(i);
+        v = v.*(t - x(i))+ c(i);
     end
 end
