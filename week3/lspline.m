@@ -16,9 +16,11 @@ n=length(t);
 for i = 1:m,
     pt = x(i);
     ind = 0;
-    for j = n-1:-1:1,
-        if (pt - t(j)) >= 0
-            ind = j;
+    %for j = n-1:-1:1,
+     %   if (pt - t(j)) >= 0
+    for j = 2:1:n,
+        if (t(j) - pt) >= 0 
+            ind = j-1;
             break
         end
     end
