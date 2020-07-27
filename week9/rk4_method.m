@@ -19,4 +19,4 @@ function [t,x] = rk4_method(f,Tspan,x0,N)
         k4 = feval(f,t(n)+h,x(:,n)+h*k3);
         x(:,n+1) = x(:,n) + h/6*(k1+2*(k2+k3)+k4);
     end 
-end
+endㅈ
